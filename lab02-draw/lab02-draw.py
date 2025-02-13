@@ -59,6 +59,8 @@ arcade.draw_circle_filled(50, 100, 15, arcade.color.AMAZON)
 arcade.draw_circle_filled(70, 100, 17, arcade.color.AMAZON)
 arcade.draw_circle_filled(70, 110, 18, arcade.color.AMAZON)
 
+
+
 #-----FIN-----#
 arcade.finish_render()
 arcade.run()
