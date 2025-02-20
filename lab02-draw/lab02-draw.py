@@ -6,12 +6,12 @@ arcade.set_background_color(arcade.color.BLACK)
 arcade.start_render()
 
 
-def planeta():
-    arcade.draw_circle_filled(400, 300, 180, arcade.color.GAINSBORO,0)
-    arcade.draw_circle_filled(400, 300, 177, arcade.color.JADE,0)
-def hamaca():
-    arcade.draw_arc_filled(400, 260, 350, 80, arcade.color.ARSENIC,180,360)
-    arcade.draw_arc_filled(400, 280, 350, 80, arcade.color.GO_GREEN,180,360)
+def planeta(center_x:float, center_y:float, radius:float):
+    arcade.draw_circle_filled(center_x, center_y, radius+3, arcade.color.GAINSBORO,0)
+    arcade.draw_circle_filled(center_x, center_y, radius, arcade.color.JADE,0)
+def hamaca(center_x:float, center_y:float, width:float, height:float, start_angle:float, end_angle:float):
+    arcade.draw_arc_filled(center_x, center_y, width, height, arcade.color.ARSENIC,start_angle,end_angle)
+    arcade.draw_arc_filled(center_x, center_y+20, width, height, arcade.color.GO_GREEN,start_angle,end_angle)
 def estrellas():
     arcade.draw_circle_filled(750, 40, 4, arcade.color.ANTI_FLASH_WHITE,0)
     arcade.draw_circle_filled(200, 100, 4, arcade.color.ANTI_FLASH_WHITE,0)
@@ -21,7 +21,7 @@ def estrellas():
     arcade.draw_circle_filled(300, 600, 4, arcade.color.ANTI_FLASH_WHITE,0)
     arcade.draw_circle_filled(450, 70, 4, arcade.color.ANTI_FLASH_WHITE,0)
     arcade.draw_circle_filled(700, 300, 4, arcade.color.ANTI_FLASH_WHITE,0)
-def G():
+def gab():
     arcade.draw_circle_filled(280, 300, 19, arcade.color.ARSENIC,0)
     arcade.draw_ellipse_filled(385,284,200,20,arcade.color.ARSENIC,5)
 
@@ -35,9 +35,9 @@ def G():
 
     arcade.draw_triangle_filled(390,340,384,350,290,300,arcade.color.ARSENIC)
 
-planeta()
-hamaca()
-G()
+planeta(400,300,177)
+hamaca(400,260,350,80,180,360)
+gab()
 estrellas()
 
 
